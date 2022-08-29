@@ -5,7 +5,7 @@
 //  Created by Sofia Chevrolat on 29/08/2022.
 //
 
-import UIKit
+import MapKit
 
 // MARK: - WorkoutViewController
 
@@ -32,6 +32,14 @@ class WorkoutViewController: UIViewController {
         return summaryView
     }()
 
+    lazy var mapView: MKMapView = {
+        let mapView = MKMapView()
+        mapView.delegate = self
+        return mapView
+    }()
+
+    let heartRateColors: [UIColor] = [.green, .yellow, .orange, .red]
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -39,6 +47,7 @@ class WorkoutViewController: UIViewController {
         view.backgroundColor = ColorPalette.Global.neutral
 
         setUpViews()
+        plotRoute()
     }
 
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
@@ -57,6 +66,10 @@ class WorkoutViewController: UIViewController {
             enum WorkoutSumamryView {
                 static let inset = 10
                 static let minimumHeight = 100
+            }
+
+            enum MapView {
+                static let offsetTop: Double = 10
             }
         }
 
@@ -105,6 +118,12 @@ class WorkoutViewController: UIViewController {
         workoutSummaryView.snp.makeConstraints { make in
             make.height.greaterThanOrEqualTo(Constant.Dimension.WorkoutSumamryView.minimumHeight)
             make.top.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(Constant.Dimension.WorkoutSumamryView.inset)
+        }
+
+        view.addSubview(mapView)
+        mapView.snp.makeConstraints { make in
+            make.leading.trailing.bottom.equalToSuperview()
+            make.top.equalTo(workoutSummaryView.snp.bottom).offset(Constant.Dimension.MapView.offsetTop)
         }
     }
 

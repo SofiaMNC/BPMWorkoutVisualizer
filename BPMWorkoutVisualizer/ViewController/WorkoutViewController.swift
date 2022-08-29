@@ -38,6 +38,35 @@ class WorkoutViewController: UIViewController {
         return mapView
     }()
 
+    lazy var legendContainerView: UIView = {
+        let legendContainerView = UIView()
+        legendContainerView.backgroundColor = ColorPalette.Global.neutral
+
+        /// Rounding top and bottom left corners
+        legendContainerView.layer.cornerRadius = Constant.Dimension.HeartRateLegend.cornerRadius
+        legendContainerView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMinXMinYCorner]
+
+        /// Adding shadow to increase visibility
+        legendContainerView.layer.shadowColor = ColorPalette.Global.inactive.cgColor
+        legendContainerView.layer.shadowOpacity = Constant.Dimension.HeartRateLegend.shadowOpacity
+        legendContainerView.layer.shadowOffset = .zero
+        legendContainerView.layer.shadowRadius = Constant.Dimension.HeartRateLegend.shadowRadius
+
+        return legendContainerView
+    }()
+
+    lazy var heartRateLegend: MiniGradientLegendView = {
+        let heartRates = workout.data.map(\.heartRate)
+
+        return MiniGradientLegendView(
+            lowestValue: heartRates.min() ?? 0,
+            gradientColors: heartRateColors,
+            highestValue: heartRates.max() ?? 0,
+            illustration: UIImage(systemName: Constant.Image.heartRateLegend)?.withTintColor(.red),
+            illustrationTintColor: .red
+        )
+    }()
+
     let heartRateColors: [UIColor] = [.green, .yellow, .orange, .red]
 
     override func viewDidLoad() {
@@ -71,11 +100,21 @@ class WorkoutViewController: UIViewController {
             enum MapView {
                 static let offsetTop: Double = 10
             }
+
+            enum HeartRateLegend {
+                static let size = CGSize(width: 200, height: 30)
+                static let trailingInset = 10
+                static let innerInset = 10
+                static let cornerRadius: CGFloat = 15
+                static let shadowOpacity: Float = 1
+                static let shadowRadius: CGFloat = 5
+            }
         }
 
         enum Image {
             static let duration = "timer"
             static let workoutValidated = "checkmark.circle.fill"
+            static let heartRateLegend = "heart.fill"
         }
     }
 
@@ -124,6 +163,18 @@ class WorkoutViewController: UIViewController {
         mapView.snp.makeConstraints { make in
             make.leading.trailing.bottom.equalToSuperview()
             make.top.equalTo(workoutSummaryView.snp.bottom).offset(Constant.Dimension.MapView.offsetTop)
+        }
+
+        view.addSubview(legendContainerView)
+        legendContainerView.snp.makeConstraints { make in
+            make.size.greaterThanOrEqualTo(Constant.Dimension.HeartRateLegend.size)
+            make.bottom.equalTo(view.safeAreaLayoutGuide).inset(Constant.Dimension.HeartRateLegend.trailingInset)
+            make.trailing.equalToSuperview()
+        }
+
+        legendContainerView.addSubview(heartRateLegend)
+        heartRateLegend.snp.makeConstraints { make in
+            make.edges.equalToSuperview().inset(Constant.Dimension.HeartRateLegend.innerInset)
         }
     }
 

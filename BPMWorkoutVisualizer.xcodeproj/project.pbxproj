@@ -32,6 +32,8 @@
 		C3F3BB9F28BD2A9300B4D5CA /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F3BB9E28BD2A9300B4D5CA /* SummaryView.swift */; };
 		C3F3BBA228BD2B1300B4D5CA /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F3BBA128BD2B1300B4D5CA /* UILabel+Extension.swift */; };
 		C3F3BBA428BD2BFF00B4D5CA /* WorkoutViewController+MKMapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F3BBA328BD2BFF00B4D5CA /* WorkoutViewController+MKMapViewDelegate.swift */; };
+		C3F3BBA628BD2CD700B4D5CA /* MiniGradientLegendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F3BBA528BD2CD700B4D5CA /* MiniGradientLegendView.swift */; };
+		C3F3BBA828BD2CEA00B4D5CA /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F3BBA728BD2CEA00B4D5CA /* GradientView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,8 @@
 		C3F3BB9E28BD2A9300B4D5CA /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
 		C3F3BBA128BD2B1300B4D5CA /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		C3F3BBA328BD2BFF00B4D5CA /* WorkoutViewController+MKMapViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WorkoutViewController+MKMapViewDelegate.swift"; sourceTree = "<group>"; };
+		C3F3BBA528BD2CD700B4D5CA /* MiniGradientLegendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniGradientLegendView.swift; sourceTree = "<group>"; };
+		C3F3BBA728BD2CEA00B4D5CA /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +192,8 @@
 				C3F3BB9A28BD2A5D00B4D5CA /* MiniDateLabel.swift */,
 				C3F3BB9C28BD2A7A00B4D5CA /* DetailedTextView.swift */,
 				C3F3BB9E28BD2A9300B4D5CA /* SummaryView.swift */,
+				C3F3BBA528BD2CD700B4D5CA /* MiniGradientLegendView.swift */,
+				C3F3BBA728BD2CEA00B4D5CA /* GradientView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -398,6 +404,7 @@
 				C3F3BB8828BD223100B4D5CA /* WorkoutDataPoint.swift in Sources */,
 				C3F3BB4C28BD1AFD00B4D5CA /* WorkoutViewController.swift in Sources */,
 				C3F3BB9F28BD2A9300B4D5CA /* SummaryView.swift in Sources */,
+				C3F3BBA828BD2CEA00B4D5CA /* GradientView.swift in Sources */,
 				C3F3BB9D28BD2A7A00B4D5CA /* DetailedTextView.swift in Sources */,
 				C3F3BB8628BD221800B4D5CA /* WorkoutType.swift in Sources */,
 				C3F3BB4828BD1AFD00B4D5CA /* AppDelegate.swift in Sources */,
@@ -405,6 +412,7 @@
 				C3F3BB8A28BD224C00B4D5CA /* Workout.swift in Sources */,
 				C3F3BBA228BD2B1300B4D5CA /* UILabel+Extension.swift in Sources */,
 				C3F3BB9B28BD2A5D00B4D5CA /* MiniDateLabel.swift in Sources */,
+				C3F3BBA628BD2CD700B4D5CA /* MiniGradientLegendView.swift in Sources */,
 				C3F3BBA428BD2BFF00B4D5CA /* WorkoutViewController+MKMapViewDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -39,15 +39,11 @@ class SummaryView {
     var illustrationView: UIImageView
 }
 
+class GradientView 
+
 class JSONRepository {
     typealias T = StoredType
-    var fileURL: URL?
-
-    add(_: StoredType) throws
-    update(_: StoredType) throws
-    get(id _: Int) -> StoredType?
-    list() throws -> [StoredPoint]?
-    delete(_: StoredType) throws
+    ...
 }
 
 %% STRUCTS
@@ -80,12 +76,7 @@ class Decodable {
 
 class Repository {
     associatedtype T
-
-    func add(_ item: T) throws
-    func update(_ item: T) throws
-    func get(id: Int) -> T?
-    func list() throws -> [T]?
-    func delete(_ item: T) throws
+    ...
 }
 
 class MKMapViewDelegate 
@@ -93,12 +84,13 @@ class MKMapViewDelegate
 %% ========== RELATIONSHIPS ========== %%
 
 WorkoutViewController ..|> MKMapViewDelegate : \nConforms to \n(Conformance)
-WorkoutViewController "1" *-- "1" JSONRepository : \nCreates \n(Composition)
+Workout *-- JSONRepository : \nCreates \n(Composition)
 WorkoutViewController "1" *-- "1" Workout : \nCreates \n(Composition)
 WorkoutViewController "1" *-- "1" MiniDateLabel : \nCreates \n(Composition)
 WorkoutViewController "1" *-- "1" DetailedTextView : \nCreates \n(Composition)
 WorkoutViewController "1" *-- "1" SummaryView : \nCreates \n(Composition)
 WorkoutViewController "1" *-- "1" LegendView : \nCreates \n(Composition)
+LegendView "1" *-- "1" GradientView : \nCreates \n(Composition)
 SummaryView "1" <.. "1" MiniDateLabel
 SummaryView "1" <.. "1" DetailedTextView
 Workout "1" <.. "1" WorkoutType : \nReceives \n(Dependency)
@@ -106,5 +98,4 @@ Workout "1" <.. "1..*" WorkoutDataPoint : \nReceives \n(Dependency)
 JSONRepository ..> WorkoutDataPoint : \nFetches
 JSONRepository ..|> Repository : \n Conforms to \n(Conformance)
 WorkoutDataPoint ..|> Decodable : \n Conforms to \n(Conformance)
-
 ```

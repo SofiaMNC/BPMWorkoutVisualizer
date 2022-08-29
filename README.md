@@ -67,23 +67,14 @@ class WorkoutViewController {
 
 class JSONRepository {
     typealias T = StoredType
-    var fileURL: URL?
-
-    add(_: StoredType) throws
-    update(_: StoredType) throws
-    get(id _: Int) -> StoredType?
-    list() throws -> [StoredPoint]?
-    delete(_: StoredType) throws
+    ...
 }
 
 %% STRUCTS
 class Workout { 
-    title: String
-    subtitle: String
+    ...
     type: WorkoutType
-    startDate: Date
-    endDate: Date?
-    duration: Double
+    ...
     data: [WorkoutDataPoint]
 }
 
@@ -106,12 +97,7 @@ class Decodable {
 
 class Repository {
     associatedtype T
-
-    func add(_ item: T) throws
-    func update(_ item: T) throws
-    func get(id: Int) -> T?
-    func list() throws -> [T]?
-    func delete(_ item: T) throws
+    ...
 }
 
 class MKMapViewDelegate 

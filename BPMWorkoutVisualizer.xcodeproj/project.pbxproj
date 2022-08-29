@@ -12,7 +12,7 @@
 		C3F3BB4C28BD1AFD00B4D5CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F3BB4B28BD1AFD00B4D5CA /* ViewController.swift */; };
 		C3F3BB5128BD1AFE00B4D5CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3F3BB5028BD1AFE00B4D5CA /* Assets.xcassets */; };
 		C3F3BB5428BD1AFE00B4D5CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3F3BB5228BD1AFE00B4D5CA /* LaunchScreen.storyboard */; };
-		C3F3BB5F28BD1AFE00B4D5CA /* BPMWorkoutVisualizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F3BB5E28BD1AFE00B4D5CA /* BPMWorkoutVisualizerTests.swift */; };
+		C3F3BB5F28BD1AFE00B4D5CA /* JSONRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F3BB5E28BD1AFE00B4D5CA /* JSONRepositoryTests.swift */; };
 		C3F3BB6928BD1AFE00B4D5CA /* BPMWorkoutVisualizerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F3BB6828BD1AFE00B4D5CA /* BPMWorkoutVisualizerUITests.swift */; };
 		C3F3BB6B28BD1AFE00B4D5CA /* BPMWorkoutVisualizerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F3BB6A28BD1AFE00B4D5CA /* BPMWorkoutVisualizerUITestsLaunchTests.swift */; };
 		C3F3BB7E28BD1BFF00B4D5CA /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C3F3BB7D28BD1BFF00B4D5CA /* SnapKit */; };
@@ -20,6 +20,12 @@
 		C3F3BB8628BD221800B4D5CA /* WorkoutType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F3BB8528BD221800B4D5CA /* WorkoutType.swift */; };
 		C3F3BB8828BD223100B4D5CA /* WorkoutDataPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F3BB8728BD223000B4D5CA /* WorkoutDataPoint.swift */; };
 		C3F3BB8A28BD224C00B4D5CA /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F3BB8928BD224C00B4D5CA /* Workout.swift */; };
+		C3F3BB8C28BD287500B4D5CA /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F3BB8B28BD287500B4D5CA /* Repository.swift */; };
+		C3F3BB8E28BD288C00B4D5CA /* JSONRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F3BB8D28BD288C00B4D5CA /* JSONRepository.swift */; };
+		C3F3BB9028BD28B700B4D5CA /* latitude_longitude_heartrate.json in Resources */ = {isa = PBXBuildFile; fileRef = C3F3BB8F28BD28B700B4D5CA /* latitude_longitude_heartrate.json */; };
+		C3F3BB9528BD291800B4D5CA /* invalid_json_format_workout_data_points_sample.json in Resources */ = {isa = PBXBuildFile; fileRef = C3F3BB9228BD291800B4D5CA /* invalid_json_format_workout_data_points_sample.json */; };
+		C3F3BB9628BD291800B4D5CA /* invalid_workout_data_points_sample.json in Resources */ = {isa = PBXBuildFile; fileRef = C3F3BB9328BD291800B4D5CA /* invalid_workout_data_points_sample.json */; };
+		C3F3BB9728BD291800B4D5CA /* valid_workout_data_points_sample.json in Resources */ = {isa = PBXBuildFile; fileRef = C3F3BB9428BD291800B4D5CA /* valid_workout_data_points_sample.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,13 +54,19 @@
 		C3F3BB5328BD1AFE00B4D5CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C3F3BB5528BD1AFE00B4D5CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3F3BB5A28BD1AFE00B4D5CA /* BPMWorkoutVisualizerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BPMWorkoutVisualizerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C3F3BB5E28BD1AFE00B4D5CA /* BPMWorkoutVisualizerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPMWorkoutVisualizerTests.swift; sourceTree = "<group>"; };
+		C3F3BB5E28BD1AFE00B4D5CA /* JSONRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONRepositoryTests.swift; sourceTree = "<group>"; };
 		C3F3BB6428BD1AFE00B4D5CA /* BPMWorkoutVisualizerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BPMWorkoutVisualizerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3F3BB6828BD1AFE00B4D5CA /* BPMWorkoutVisualizerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPMWorkoutVisualizerUITests.swift; sourceTree = "<group>"; };
 		C3F3BB6A28BD1AFE00B4D5CA /* BPMWorkoutVisualizerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPMWorkoutVisualizerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C3F3BB8528BD221800B4D5CA /* WorkoutType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutType.swift; sourceTree = "<group>"; };
 		C3F3BB8728BD223000B4D5CA /* WorkoutDataPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDataPoint.swift; sourceTree = "<group>"; };
 		C3F3BB8928BD224C00B4D5CA /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		C3F3BB8B28BD287500B4D5CA /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		C3F3BB8D28BD288C00B4D5CA /* JSONRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONRepository.swift; sourceTree = "<group>"; };
+		C3F3BB8F28BD28B700B4D5CA /* latitude_longitude_heartrate.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = latitude_longitude_heartrate.json; sourceTree = "<group>"; };
+		C3F3BB9228BD291800B4D5CA /* invalid_json_format_workout_data_points_sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = invalid_json_format_workout_data_points_sample.json; sourceTree = "<group>"; };
+		C3F3BB9328BD291800B4D5CA /* invalid_workout_data_points_sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = invalid_workout_data_points_sample.json; sourceTree = "<group>"; };
+		C3F3BB9428BD291800B4D5CA /* valid_workout_data_points_sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = valid_workout_data_points_sample.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,7 +132,8 @@
 		C3F3BB5D28BD1AFE00B4D5CA /* BPMWorkoutVisualizerTests */ = {
 			isa = PBXGroup;
 			children = (
-				C3F3BB5E28BD1AFE00B4D5CA /* BPMWorkoutVisualizerTests.swift */,
+				C3F3BB9128BD28FD00B4D5CA /* Resources */,
+				C3F3BB5E28BD1AFE00B4D5CA /* JSONRepositoryTests.swift */,
 			);
 			path = BPMWorkoutVisualizerTests;
 			sourceTree = "<group>";
@@ -150,6 +163,8 @@
 				C3F3BB8528BD221800B4D5CA /* WorkoutType.swift */,
 				C3F3BB8728BD223000B4D5CA /* WorkoutDataPoint.swift */,
 				C3F3BB8928BD224C00B4D5CA /* Workout.swift */,
+				C3F3BB8B28BD287500B4D5CA /* Repository.swift */,
+				C3F3BB8D28BD288C00B4D5CA /* JSONRepository.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -172,7 +187,18 @@
 		C3F3BB7B28BD1BBD00B4D5CA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C3F3BB8F28BD28B700B4D5CA /* latitude_longitude_heartrate.json */,
 				C3F3BB5028BD1AFE00B4D5CA /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C3F3BB9128BD28FD00B4D5CA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C3F3BB9228BD291800B4D5CA /* invalid_json_format_workout_data_points_sample.json */,
+				C3F3BB9328BD291800B4D5CA /* invalid_workout_data_points_sample.json */,
+				C3F3BB9428BD291800B4D5CA /* valid_workout_data_points_sample.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -290,6 +316,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3F3BB9028BD28B700B4D5CA /* latitude_longitude_heartrate.json in Resources */,
 				C3F3BB5428BD1AFE00B4D5CA /* LaunchScreen.storyboard in Resources */,
 				C3F3BB5128BD1AFE00B4D5CA /* Assets.xcassets in Resources */,
 			);
@@ -299,6 +326,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3F3BB9628BD291800B4D5CA /* invalid_workout_data_points_sample.json in Resources */,
+				C3F3BB9728BD291800B4D5CA /* valid_workout_data_points_sample.json in Resources */,
+				C3F3BB9528BD291800B4D5CA /* invalid_json_format_workout_data_points_sample.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +366,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3F3BB8C28BD287500B4D5CA /* Repository.swift in Sources */,
+				C3F3BB8E28BD288C00B4D5CA /* JSONRepository.swift in Sources */,
 				C3F3BB8828BD223100B4D5CA /* WorkoutDataPoint.swift in Sources */,
 				C3F3BB4C28BD1AFD00B4D5CA /* ViewController.swift in Sources */,
 				C3F3BB8628BD221800B4D5CA /* WorkoutType.swift in Sources */,
@@ -349,7 +381,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3F3BB5F28BD1AFE00B4D5CA /* BPMWorkoutVisualizerTests.swift in Sources */,
+				C3F3BB5F28BD1AFE00B4D5CA /* JSONRepositoryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -28,4 +28,29 @@ struct Workout {
             return Double((data.count / WorkoutDataPoint.defaultFrequency) * 60)
         }
     }
+
+    static func makeSampleWorkout() -> Workout {
+        let workoutSampleURL = Bundle.main.url(
+            forResource: "latitude_longitude_heartrate",
+            withExtension: "json"
+        )
+
+        return Workout(
+            title: "Outdoor Running 👟",
+            subtitle: "Stretch",
+            type: .running,
+            startDate: Calendar.current.date(byAdding: .day, value: -1, to: Date()) ?? Date(),
+            endDate: nil,
+            data: fetchSampleWorkoutData(at: workoutSampleURL)
+        )
+    }
+
+    private static func fetchSampleWorkoutData(at workoutSampleURL: URL?) -> [WorkoutDataPoint] {
+        do {
+            return try JSONRepository<WorkoutDataPoint>(fileURL: workoutSampleURL).list() ?? []
+        } catch {
+            assertionFailure("Decoding error = \(String(describing: error))")
+            return []
+        }
+    }
 }

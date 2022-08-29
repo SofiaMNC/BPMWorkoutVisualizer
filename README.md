@@ -4,6 +4,23 @@
 [![forthebadge](https://forthebadge.com/images/badges/made-with-swift.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
 
+A sample app to visualize a workout described by data points in a JSON file on a mapview, along with the heart rate.
+Supports dynamic type, voice over and dark mode.
+
+<table>
+    <tbody>
+        <tr>
+            <td>Light mode</td>
+            <td>Dark mode</td>
+        </tr>
+        <tr>
+<td><img src="https://user-images.githubusercontent.com/75146312/187275589-4ebe9b25-0525-40be-bf9a-69742c5b4e2f.jpeg" width=200px/></td>
+<td><img src="https://user-images.githubusercontent.com/75146312/187275609-02706bd0-8432-4591-874c-28dbf8201c13.jpeg" width=200px style="display:inline-block" /></td>
+        </tr>
+<tr>
+    </tbody>
+</table>
+
 ____
 
 
@@ -16,7 +33,7 @@ From a JSON file containing workout data points (latitude, longitude, heart rate
 - Supports: 
     - Accessibility Features:
         - Dynamic Type and Bold Text
-        - Voice Over
+        - Voice Over (only for the Summary View. A custom rotor would be best for the map view)
     - Dark mode
 
 

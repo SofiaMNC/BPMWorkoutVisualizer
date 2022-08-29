@@ -8,7 +8,6 @@
 import XCTest
 
 class BPMWorkoutVisualizerUITestsLaunchTests: XCTestCase {
-
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
     }
